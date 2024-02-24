@@ -116,7 +116,7 @@ def simulate_random_reads(n_reads: int, len_read: int) -> List:
 
 if __name__ == "__main__":
     # Simulate epitopes
-    epitopes = simulate_epitopes(10, 5)
+    epitopes = simulate_epitopes(10)
     # print(f'Epitopes: {epitopes}')
 
     # Simulate V and J genes

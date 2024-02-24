@@ -6,10 +6,17 @@ sys.setrecursionlimit(100000)
 
 
 def OverlapVDJAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: int,
-                        v_gene: str, j_gene: str, read: str,
+                        v_gene: str, j_gene: str, read: str, overlap_match_score: int, overlap_mismatch_score: int,
                         print_details) -> Tuple[int, str, str]:
     score_v_tail, aligned_v_tail, aligned_read_head = OverlapAlignment(match_reward, mismatch_penalty, indel_penalty, v_gene, read, print_details)
     score_j_head, aligned_read_tail, aligned_j_head = OverlapAlignment(match_reward, mismatch_penalty, indel_penalty, read, j_gene, print_details)
+    score_overlap_v, score_overlap_j = 0, 0
+    if len(aligned_v_tail) > 0 and len(aligned_read_head) > 0:
+        score_overlap_v = sum([overlap_match_score if aligned_v_tail[i] == aligned_read_head[i] else overlap_mismatch_score for i in range(len(aligned_v_tail))])
+    if len(aligned_read_tail) > 0 and len(aligned_j_head) > 0:
+        score_overlap_j = sum([overlap_match_score if aligned_read_tail[i] == aligned_j_head[i] else overlap_mismatch_score for i in range(len(aligned_read_tail))])
+    final_score = score_overlap_v + score_overlap_j
+    return final_score, aligned_v_tail, aligned_read_head, aligned_read_tail, aligned_j_head
 
 
 def OverlapAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: int,
@@ -65,3 +72,13 @@ def OverlapAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: in
             t_out = t[j-1] + t_out
             j -= 1
     return max_score, s_out, t_out
+
+
+if __name__ == "__main__":
+    match_reward, mismatch_penalty, indel_penalty = 1, 1, 1
+    v_gene = "CCAT"
+    read = "AT"
+    j_gene = "ATCC"
+    overlap_match_score, overlap_mismatch_score = 3, 1
+    print_details = False
+    print(OverlapVDJAlignment(match_reward, mismatch_penalty, indel_penalty, v_gene, j_gene, read, overlap_match_score, overlap_mismatch_score, print_details))
