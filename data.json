@@ -1,0 +1,101 @@
+{
+    "amino_acids": {
+        "A": {
+            "full_name": "Alanine",
+            "three_letter": "Ala"
+        },
+        "R": {
+            "full_name": "Arginine",
+            "three_letter": "Arg"
+        },
+        "N": {
+            "full_name": "Asparagine",
+            "three_letter": "Asn"
+        },
+        "D": {
+            "full_name": "Aspartic acid",
+            "three_letter": "Asp"
+        },
+        "C": {
+            "full_name": "Cysteine",
+            "three_letter": "Cys"
+        },
+        "Q": {
+            "full_name": "Glutamine",
+            "three_letter": "Gln"
+        },
+        "E": {
+            "full_name": "Glutamic acid",
+            "three_letter": "Glu"
+        },
+        "G": {
+            "full_name": "Glycine",
+            "three_letter": "Gly"
+        },
+        "H": {
+            "full_name": "Histidine",
+            "three_letter": "His"
+        },
+        "I": {
+            "full_name": "Isoleucine",
+            "three_letter": "Ile"
+        },
+        "L": {
+            "full_name": "Leucine",
+            "three_letter": "Leu"
+        },
+        "K": {
+            "full_name": "Lysine",
+            "three_letter": "Lys"
+        },
+        "M": {
+            "full_name": "Methionine",
+            "three_letter": "Met"
+        },
+        "F": {
+            "full_name": "Phenylalanine",
+            "three_letter": "Phe"
+        },
+        "P": {
+            "full_name": "Proline",
+            "three_letter": "Pro"
+        },
+        "S": {
+            "full_name": "Serine",
+            "three_letter": "Ser"
+        },
+        "T": {
+            "full_name": "Threonine",
+            "three_letter": "Thr"
+        },
+        "W": {
+            "full_name": "Tryptophan",
+            "three_letter": "Trp"
+        },
+        "Y": {
+            "full_name": "Tyrosine",
+            "three_letter": "Tyr"
+        },
+        "V": {
+            "full_name": "Valine",
+            "three_letter": "Val"
+        }
+    },
+    "nucleotides": {
+        "A": {
+            "full_name": "Adenine"
+        },
+        "T": {
+            "full_name": "Thymine"
+        },
+        "C": {
+            "full_name": "Cytosine"
+        },
+        "G": {
+            "full_name": "Guanine"
+        },
+        "N": {
+            "full_name": "Any nucleotide (ambiguous)"
+        }
+    }
+}
