@@ -38,13 +38,14 @@ def simulate_vj_genes(n_genes: int, len_gene: int, epitope_pool: List) -> Dict:
     genes = {}
     for i in range(n_genes):
         gene = random_nt_sequence(len_gene)
-        num_epitopes = random.randint(1, 5)
+        # TODO - A gene can have multiple epitopes
+        num_epitopes = random.randint(1, 10)
         gene_epitopes = random.sample(epitope_pool, num_epitopes)
         genes[i] = {'gene': gene, 'epitopes': gene_epitopes}
     return genes
 
 
-def simulate_epitopes(n_epitopes: int, len_epitope: int) -> List:
+def simulate_epitopes(n_epitopes: int) -> List:
     """
     Simulate epitopes
 
@@ -55,8 +56,9 @@ def simulate_epitopes(n_epitopes: int, len_epitope: int) -> List:
     """
     epitopes = []
     amino_acids_list = list(amino_acids.keys())
+    len_epitopes = random.randint(8, 11)
     for i in range(n_epitopes):
-        epitope = ''.join(random.choice(amino_acids_list) for _ in range(len_epitope))
+        epitope = ''.join(random.choice(amino_acids_list) for _ in range(len_epitopes))
         epitopes.append(epitope)
     return epitopes
 
@@ -73,14 +75,12 @@ def simulate_overlap_reads(n_reads: int, len_read: int, v_gene_pool: Dict, j_gen
     j_gene_pool : Dict, J genes
     """
     reads = {}
-    nt_list = list(nts.keys())
-    while len(reads) < n_reads:
+    count = 0
+    while count < n_reads:
         v_gene = random.choice(list(v_gene_pool.keys()))
         j_gene = random.choice(list(j_gene_pool.keys()))
-        # TODO: Can different epitopes be present in the V and J genes?
         v_gene_seq = v_gene_pool[v_gene]['gene']
         j_gene_seq = j_gene_pool[j_gene]['gene']
-        # !!! ^^^^
         len_v_overlap = random.randint(0, min(len_read, len(v_gene_seq)))
         len_j_overlap = random.randint(0, min(len_read - len_v_overlap, len(j_gene_seq)))
         len_d = len_read - len_v_overlap - len_j_overlap
@@ -89,8 +89,8 @@ def simulate_overlap_reads(n_reads: int, len_read: int, v_gene_pool: Dict, j_gen
         # Take the last v_overlap nucleotides from the V gene, d_seq, and the first j_overlap nucleotides from the J gene
         read_seq = v_gene_seq[-len_v_overlap:] + d_seq + j_gene_seq[:len_j_overlap]
         read_epitopes = list(set(v_gene_pool[v_gene]['epitopes'] + j_gene_pool[j_gene]['epitopes']))
-        reads[len(reads)] = {'read': read_seq, "v_gene": v_gene_pool[v_gene], "j_gene": j_gene_pool[j_gene], "epitopes": read_epitopes}
-
+        reads[count] = {'read': read_seq, "v_gene": v_gene_pool[v_gene], "d_gene": d_seq, "j_gene": j_gene_pool[j_gene], "epitopes": read_epitopes}
+        count += 1
         assert len(read_seq) == len_read
         assert len(read_seq) == len_v_overlap + len_d + len_j_overlap
         assert read_seq[:len_v_overlap] == v_gene_seq[-len_v_overlap:] if len_v_overlap > 0 else True
