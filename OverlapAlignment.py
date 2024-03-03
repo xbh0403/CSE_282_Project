@@ -30,8 +30,8 @@ def OverlapVDJAlignment(match_reward: int, mismatch_penalty: int, indel_penalty:
     -------
     Tuple[int, str, str, List, str, str, List], score, aligned V tail, aligned read head, aligned read tail, aligned J head
     """
-    v_gene_seq, j_gene_seq, read_seq = v_gene['gene'], j_gene['gene'], read['read']
-    v_gene_epi, j_gene_epi, read_epi = v_gene['epitopes'], j_gene['epitopes'], read['epitopes']
+    v_gene_seq, j_gene_seq, read_seq = v_gene.seq, j_gene.seq, read.seq
+    v_gene_epi, j_gene_epi, read_epi = v_gene.epitopes, j_gene.epitopes, read.epitopes
     score_v_tail, aligned_v_tail, aligned_read_head = OverlapAlignment(match_reward, mismatch_penalty, indel_penalty, v_gene_seq, read_seq, print_details)
     score_j_head, aligned_read_tail, aligned_j_head = OverlapAlignment(match_reward, mismatch_penalty, indel_penalty, read_seq, j_gene_seq, print_details)
     score_overlap_v, score_overlap_j = 0, 0

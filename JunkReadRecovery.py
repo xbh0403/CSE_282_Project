@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import sys
 from typing import List, Dict, Iterable, Tuple
@@ -6,6 +5,8 @@ import json
 sys.setrecursionlimit(100000)
 import tqdm
 
+from Read import Read
+from Gene import Gene
 from OverlapAlignment import OverlapVDJAlignment
 
 def KeepHighScoreAlignments(data: Dict, threshold: int) -> Dict:
@@ -35,7 +36,7 @@ def KeepHighScoreAlignments(data: Dict, threshold: int) -> Dict:
 
 def AlignAllReads(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                   overlap_match_score: int, overlap_mismatch_score: int,
-                   data: Dict) -> List:
+                  data: Dict) -> List:
     """
     Perform overlap alignment between V, D, and J genes and reads
 
@@ -44,21 +45,23 @@ def AlignAllReads(match_reward: int, mismatch_penalty: int, indel_penalty: int,
     match_reward : int, reward for matching nucleotides
     mismatch_penalty : int, penalty for mismatching nucleotides
     indel_penalty : int, penalty for indels
-    reads : List, reads
-    v_genes : Dict, V genes
-    j_genes : Dict, J genes
+    overlap_match_score : int, reward for matching nucleotides in the overlap region
+    overlap_mismatch_score : int, penalty for mismatching nucleotides in the overlap region
+    data : Dict, data
     """
     all_epitopes, all_v_genes, all_j_genes, overlap_reads, random_reads = \
         data['epitopes'], data['v_genes'], data['j_genes'], data['overlap_reads'], data['random_reads']
     
     results_overlap = []
-    for read in tqdm.tqdm(overlap_reads.values()):
+    print('Aligning overlap reads')
+    for read in tqdm.tqdm(overlap_reads):
         result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
                               overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
         results_overlap.append(result)
 
     results_random = []
-    for read in tqdm.tqdm(random_reads.values()):
+    print('\nAligning random reads')
+    for read in tqdm.tqdm(random_reads):
         result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
                                 overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
         results_random.append(result)
@@ -75,7 +78,7 @@ def AlignAllReads(match_reward: int, mismatch_penalty: int, indel_penalty: int,
 
 def AlignOneRead(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                  overlap_match_score: int, overlap_mismatch_score: int,
-                v_genes: Dict, j_genes: Dict, read: Dict) -> Dict:
+                v_genes: Gene, j_genes: Gene, read: Read) -> Dict:
     """
     Perform overlap alignment between V, D, and J genes and a read
 
@@ -84,14 +87,16 @@ def AlignOneRead(match_reward: int, mismatch_penalty: int, indel_penalty: int,
     match_reward : int, reward for matching nucleotides
     mismatch_penalty : int, penalty for mismatching nucleotides
     indel_penalty : int, penalty for indels
-    v_genes : Dict, V genes
-    j_genes : Dict, J genes
-    read : Dict, read
+    overlap_match_score : int, reward for matching nucleotides in the overlap region
+    overlap_mismatch_score : int, penalty for mismatching nucleotides in the overlap region
+    v_genes : Gene, V genes
+    j_genes : Gene, J genes
+    read : Read, read
     """
     best_score = -np.inf
     best_result = None
-    for v_gene in v_genes.values():
-        for j_gene in j_genes.values():
+    for v_gene in v_genes:
+        for j_gene in j_genes:
             result = OverlapVDJAlignment(match_reward, mismatch_penalty, indel_penalty, overlap_match_score,
                                         overlap_mismatch_score, v_gene, j_gene, read, False)
             if result['final_score'] > best_score:
@@ -100,8 +105,10 @@ def AlignOneRead(match_reward: int, mismatch_penalty: int, indel_penalty: int,
     return best_result
 
 if __name__ == "__main__":
-    with open('./Simulation/test.json') as f:
+    with open('./Simulation/sim_1.json') as f:
         data = json.load(f)
+        data = {k: [Gene(**d) for d in v] if k in ['v_genes', 'j_genes'] else [Read(**d) for d in v] if k in ['overlap_reads', 'random_reads'] else v for k, v in data.items()}
+    
     match_reward, mismatch_penalty, indel_penalty = 1, 1, 1
     overlap_match_score, overlap_mismatch_score = 1, 1
     threshold = 5
