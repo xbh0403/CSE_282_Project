@@ -87,7 +87,12 @@ def simulate_overlap_reads(n_reads: int, len_read: int, v_gene_pool: Dict, j_gen
         if len_d <= 0 or len_d >= 12: continue
         d_seq = random_nt_sequence(len_d)
         # Take the last v_overlap nucleotides from the V gene, d_seq, and the first j_overlap nucleotides from the J gene
-        read_seq = v_gene_seq[-len_v_overlap:] + d_seq + j_gene_seq[:len_j_overlap]
+        if len_v_overlap == 0:
+            read_seq = d_seq + j_gene_seq[:len_j_overlap]
+        elif len_j_overlap == 0:
+            read_seq = v_gene_seq[-len_v_overlap:] + d_seq
+        else:
+            read_seq = v_gene_seq[-len_v_overlap:] + d_seq + j_gene_seq[:len_j_overlap]
         read_epitopes = list(set(v_gene_pool[v_gene]['epitopes'] + j_gene_pool[j_gene]['epitopes']))
         reads[count] = {'read': read_seq, "v_gene": v_gene_pool[v_gene], "d_gene": d_seq, "j_gene": j_gene_pool[j_gene], "epitopes": read_epitopes}
         count += 1
@@ -112,21 +117,38 @@ def simulate_random_reads(n_reads: int, len_read: int) -> List:
     reads = [random_nt_sequence(len_read) for _ in range(n_reads)]
     return reads
 
+def simulate(num_epitopes: int, num_v_genes: int, num_j_genes: int, num_reads: int, len_read: int):
+    """
+    Simulate data main function
+
+    Parameters
+    ----------
+    num_epitopes : int, number of epitopes to simulate
+    num_v_genes : int, number of V genes to simulate
+    num_j_genes : int, number of J genes to simulate
+    num_reads : int, number of reads to simulate
+    len_read : int, length of the reads
+    """
+    epitopes = simulate_epitopes(num_epitopes)
+    v_genes = simulate_vj_genes(num_v_genes, len_read, epitopes)
+    j_genes = simulate_vj_genes(num_j_genes, len_read, epitopes)
+    overlap_reads = simulate_overlap_reads(num_reads, len_read, v_genes, j_genes)
+    random_reads = simulate_random_reads(num_reads, len_read)
+    return {
+        'epitopes': epitopes,
+        'v_genes': v_genes,
+        'j_genes': j_genes,
+        'overlap_reads': overlap_reads,
+        'random_reads': random_reads
+    }
 
 
 if __name__ == "__main__":
-    # Simulate epitopes
-    epitopes = simulate_epitopes(10)
-    # print(f'Epitopes: {epitopes}')
-
-    # Simulate V and J genes
-    v_genes = simulate_vj_genes(10, 75, epitopes)
-    j_genes = simulate_vj_genes(10, 75, epitopes)
-    # print(f'V genes: {v_genes}')
-    # print(f'J genes: {j_genes}')
-
-    # Simulate reads
-    overlap_reads = simulate_overlap_reads(10, 75, v_genes, j_genes)
-    random_reads = simulate_random_reads(10, 75)
-    print(f'Overlap reads: {overlap_reads}')
-    # print(f'Random reads: {random_reads}')
+    num_epitopes = 10
+    num_v_genes = 10
+    num_j_genes = 10
+    num_reads = 100
+    len_read = 75
+    data = simulate(num_epitopes, num_v_genes, num_j_genes, num_reads, len_read)
+    with open('./Simulation/sim_0.json', 'w') as f:
+        json.dump(data, f, indent=4)
