@@ -166,5 +166,5 @@ if __name__ == "__main__":
     num_reads = 100
     len_read = 75
     data = simulate(num_epitopes, num_v_genes, num_j_genes, num_reads, len_read, True)
-    with open('./Simulation/sim_1.json', 'w') as f:
+    with open('./Simulation/sim_grid_search.json', 'w') as f:
         json.dump(data, f, indent=4)
