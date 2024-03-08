@@ -14,7 +14,7 @@ from concurrent.futures import ProcessPoolExecutor
 
 def JunkReadRecovery(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                      overlap_match_score: int, overlap_mismatch_score: int, threshold: int,
-                     data: Dict, save: bool = False, print_progress: bool = False) -> Dict:
+                     data: Dict, save_path: str|None = None, print_progress: bool = False) -> Dict:
     """
     Perform overlap alignment between V, D, and J genes and reads
 
@@ -27,22 +27,33 @@ def JunkReadRecovery(match_reward: int, mismatch_penalty: int, indel_penalty: in
     overlap_mismatch_score : int, penalty for mismatching nucleotides in the overlap region
     threshold : int, threshold for the score
     data : Dict, data
-    save : bool, save the results to a JSON file
+    save_path : str, path to save the results
     print_progress : bool, print progress
     """
     final_json = AlignAllReads(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, data, print_progress=print_progress)
-    final_json = KeepHighScoreAlignments(final_json, threshold)
-    if save:
+    final_json_filtered = KeepHighScoreAlignments(final_json, threshold)
+    if save_path is not None:
+        final_json_filtered_save = {
+            'high_score_overlap': final_json_filtered['high_score_overlap'],
+            'high_score_random': final_json_filtered['high_score_random'],
+            'all_epitopes': final_json_filtered['all_epitopes'],
+            'all_v_genes': [i.__json__() for i in final_json_filtered['all_v_genes']],
+            'all_j_genes': [i.__json__() for i in final_json_filtered['all_j_genes']]
+        }
+        with open(save_path+'_recovered.json', 'w') as f:
+            json.dump(final_json_filtered_save, f)
+
         final_json_save = {
-            'high_score_overlap': final_json['high_score_overlap'],
-            'high_score_random': final_json['high_score_random'],
+            'overlap': final_json['overlap'],
+            'random': final_json['random'],
             'all_epitopes': final_json['all_epitopes'],
             'all_v_genes': [i.__json__() for i in final_json['all_v_genes']],
             'all_j_genes': [i.__json__() for i in final_json['all_j_genes']]
         }
-        with open('recovered_reads.json', 'w') as f:
+        with open(save_path+'_all.json', 'w') as f:
             json.dump(final_json_save, f)
-    return final_json
+            
+    return final_json_filtered
 
 
 def KeepHighScoreAlignments(data: Dict, threshold: int) -> Dict:

@@ -35,7 +35,7 @@ def brute_force_max_coverage(epitope_reads_dict: Dict, k: int) -> Set:
             max_coverage = len(combined_reads)
             best_combination = set(combination)
     
-    return best_combination
+    return best_combination, max_coverage
 
 
 if __name__ == "__main__":

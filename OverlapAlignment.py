@@ -1,4 +1,3 @@
-#%%
 import pandas as pd
 import numpy as np
 import sys
@@ -129,7 +128,6 @@ def OverlapAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: in
 
 
 if __name__ == "__main__":
-    #%%
     with open("./Simulation/test.json") as f:
         data = json.load(f)
 
@@ -137,7 +135,6 @@ if __name__ == "__main__":
     overlap_match_score, overlap_mismatch_score = 1, 1
     print_details = False
 
-    #%%
     # Test OverlapVDJAlignment on overlap_read
     v_gene = data['v_genes']['0']
     j_gene = data['j_genes']['0']
@@ -146,7 +143,6 @@ if __name__ == "__main__":
     print(result['final_score'], result['aligned_v_tail'], result['aligned_read_head'], result['v_gene_epi'], result['aligned_read_tail'], result['aligned_j_head'], result['j_gene_epi'])
 
 
-    #%%
     # Test OverlapVDJAlignment on random_read
     read = data['random_reads']['0']
     result = OverlapVDJAlignment(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, v_gene, j_gene, read, print_details)

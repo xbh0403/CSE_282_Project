@@ -19,9 +19,12 @@ def greedy_max_coverage(epitope_reads_dict: Dict, k: int) -> Set:
     -------
     Set
         The set of selected epitopes that maximizes the coverage of reads.
+    int
+        The number of reads covered by the selected epitopes.
     """
     selected_epitopes = set()
     uncovered_reads = set(read for reads in epitope_reads_dict.values() for read in reads)
+    num_all_reads = len(uncovered_reads)
     for _ in range(k):
         if not uncovered_reads:
             break
@@ -35,7 +38,7 @@ def greedy_max_coverage(epitope_reads_dict: Dict, k: int) -> Set:
         if best_epitope:
             selected_epitopes.add(best_epitope)
             uncovered_reads -= set(epitope_reads_dict[best_epitope])
-    return selected_epitopes
+    return selected_epitopes, num_all_reads - len(uncovered_reads)
 
 # Example usage
 if __name__ == "__main__":
@@ -45,7 +48,7 @@ if __name__ == "__main__":
     match_reward, mismatch_penalty, indel_penalty = 1, 1, 1
     overlap_match_score, overlap_mismatch_score = 1, 1
     threshold = 25
-    final_json = JunkReadRecovery(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, threshold, data, save=True, print_progress=True)
+    final_json = JunkReadRecovery(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, threshold, data, print_progress=True)
     
     epitope_reads_dict = build_epitope_reads_dict(final_json)
     k = 2
