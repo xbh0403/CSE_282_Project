@@ -28,7 +28,7 @@ def objective(config):
     overlap_mismatch_score = config["overlap_mismatch_score"]
     threshold = config["threshold"]
 
-    with open("/Users/xbh0403/PycharmProjects/Pavel/Simulation/sim_10.json", "r") as f:
+    with open("/new-stg/home/banghua/Pavel/Simulation/sim_grid_search.json", "r") as f:
         data = json.load(f)
     
     num_pos = len(data["overlap_reads"])
@@ -53,9 +53,9 @@ def objective(config):
 
 
 search_space = {
-    "match_reward": tune.choice(list(range(1, 6))),
-    "mismatch_penalty": tune.choice(list(range(1, 6))),
-    "indel_penalty": tune.choice(list(range(1, 6))),
+    "match_reward": tune.grid_search(list(range(1, 6))),
+    "mismatch_penalty": tune.grid_search(list(range(1, 6))),
+    "indel_penalty": tune.grid_search(list(range(1, 6))),
     "overlap_match_score": tune.grid_search(list(range(1, 6))),
     "overlap_mismatch_score": tune.grid_search(list(range(1, 6))),
     "threshold": tune.grid_search(list(range(24, 36)))
@@ -64,7 +64,7 @@ search_space = {
 tuner = tune.Tuner(objective, param_space=search_space)
 
 results = tuner.fit()
-print(results.get_best_result(metric="score", mode="max").config)
+print(results.get_best_result(metric="score", mode="max"))
 
 df = results.get_dataframe()
-df.to_csv("grid_search_results.csv", index=False)
+df.to_csv("grid_search_results_big.csv", index=False)

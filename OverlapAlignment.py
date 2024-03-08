@@ -4,12 +4,14 @@ import numpy as np
 import sys
 from typing import List, Dict, Iterable, Tuple
 import json
+from Gene import Gene
+from Read import Read
 sys.setrecursionlimit(100000)
 
 
 def OverlapVDJAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                         overlap_match_score: int, overlap_mismatch_score: int,
-                        v_gene: Dict, j_gene: Dict, read: Dict, 
+                        v_gene: Gene, j_gene: Gene, read: Read, 
                         print_details) -> Dict:
     """
     Perform overlap alignment between V, D, and J genes and a read
@@ -43,6 +45,8 @@ def OverlapVDJAlignment(match_reward: int, mismatch_penalty: int, indel_penalty:
     
     result = {
         'final_score': final_score,
+        'read_seq': read_seq,
+        'read_id': read.id,
         'aligned_v_tail': aligned_v_tail,
         'aligned_read_head': aligned_read_head,
         'v_gene_epi': v_gene_epi,

@@ -1,522 +1,479 @@
 {
     "epitopes": [
-        "DGSNEHDDV",
-        "WHERHLSEH",
-        "EFLPHFANY",
-        "IMMYFAGME",
-        "VPQWQDLIQ",
-        "DCFPHVAYL",
-        "WIVFFYMLD",
-        "PICCNFVKD",
-        "VFWSMQRDE",
-        "PCDMVLKNK"
+        "VMFLNLFI",
+        "WEPCFQQN",
+        "IDSNDSEK",
+        "VAWSRMRN",
+        "YCYHENAH",
+        "VLGLWPRL",
+        "EASWVYHN",
+        "DWHFFRCV",
+        "STNTDAVG",
+        "ATHGCGYA"
     ],
     "v_genes": [
         {
-            "seq": "AGGAGACGGACAACCGGTCTTCCCCCCAAACCGATCTCCAATTGACTACTTTGAANCAAACAAGCTTGGGTCATC",
+            "seq": "AAACGAAGAAGCCCGNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTC",
             "gene_type": "V",
             "epitopes": [
-                "PICCNFVKD"
+                "WEPCFQQN",
+                "DWHFFRCV",
+                "EASWVYHN",
+                "YCYHENAH",
+                "ATHGCGYA",
+                "IDSNDSEK",
+                "VLGLWPRL"
             ]
         },
         {
-            "seq": "TTTCGCGCGGCGTCCTCGCTTTAGACCCCGATGGATGATTATCACGGCAGTCCCACCGATCGGGACCGGACCCTG",
+            "seq": "CAATANTTAGCCGGACGACCTCGGNCATCCAGTGCTTCGTTAACCTACTAACAATCTCCTAAGAGTGACTATACC",
             "gene_type": "V",
             "epitopes": [
-                "PICCNFVKD",
-                "IMMYFAGME"
+                "YCYHENAH",
+                "ATHGCGYA",
+                "EASWVYHN",
+                "VAWSRMRN",
+                "IDSNDSEK",
+                "STNTDAVG",
+                "DWHFFRCV"
             ]
         },
         {
-            "seq": "GTACAAATTACTTAAAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNA",
+            "seq": "TGCAATTGGCGGGCGAGGAGCGGCGATTACGGNAAAGACGAGCTGAGAGGATATAGAAGCAGTGGACTGCTATCT",
             "gene_type": "V",
             "epitopes": [
-                "EFLPHFANY",
-                "PICCNFVKD",
-                "DGSNEHDDV",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "VPQWQDLIQ",
-                "IMMYFAGME",
-                "PCDMVLKNK"
+                "DWHFFRCV",
+                "YCYHENAH",
+                "ATHGCGYA",
+                "VAWSRMRN",
+                "EASWVYHN"
             ]
         },
         {
-            "seq": "GCAGTCGCGCTCAGCAATCATATCTACTGTTCCTACGTATCAACCCGCCAAACACCCGCTTTCGTCTTGCAGTGT",
+            "seq": "CCTGCCGATATTATTNTAGGATGGATCCCAAACAAAGCGCTGTAGGCCTTCCTTTGACGCAATGACCTAGTGTAA",
             "gene_type": "V",
             "epitopes": [
-                "PCDMVLKNK",
-                "DGSNEHDDV",
-                "IMMYFAGME",
-                "DCFPHVAYL",
-                "PICCNFVKD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "WHERHLSEH",
-                "WIVFFYMLD"
+                "STNTDAVG",
+                "EASWVYHN",
+                "VLGLWPRL"
             ]
         },
         {
-            "seq": "ATAAAAGGCGCAATTCAGCTTACGCGTGTAATAACTGTTCCCCATCCGTAATGCCAAAAAGCGAGTGACAAATGG",
+            "seq": "GAGCAATATGAGCCTTCCANAAGTCACGACTCNGCCTCAGCTTCTCAAACCCTCGCCCTCGGTGGAGGGAAGATT",
             "gene_type": "V",
             "epitopes": [
-                "VFWSMQRDE",
-                "DCFPHVAYL",
-                "IMMYFAGME",
-                "WHERHLSEH",
-                "WIVFFYMLD",
-                "PICCNFVKD",
-                "DGSNEHDDV",
-                "EFLPHFANY",
-                "PCDMVLKNK",
-                "VPQWQDLIQ"
+                "VAWSRMRN",
+                "VMFLNLFI"
             ]
         },
         {
-            "seq": "ATNATGAATTCTTGGGACGTTACTCCGCCGTCCTGTCGAGGGGCAATGTATACAATTTTGATTANTGTGGGAATC",
+            "seq": "CCTTCCCGTGGAGCAACNACGTAGCACGGTAGATGCGGNGAGAAGGACTNCTCTAGCTAGCGGTCAATGTGGNGC",
             "gene_type": "V",
             "epitopes": [
-                "WHERHLSEH",
-                "DGSNEHDDV",
-                "WIVFFYMLD",
-                "PCDMVLKNK",
-                "DCFPHVAYL",
-                "VPQWQDLIQ",
-                "IMMYFAGME"
+                "WEPCFQQN",
+                "IDSNDSEK",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "ATHGCGYA",
+                "VAWSRMRN",
+                "EASWVYHN",
+                "VMFLNLFI",
+                "STNTDAVG"
             ]
         },
         {
-            "seq": "ATCGTAAAGCCACCAGAATCCGTTCTCCGCAAGATGCATACGCAATCGCCGTGTGTATTGTTAATGTCACAGTGG",
+            "seq": "TATAATCTGACCTGTATCGTGACAACCTAATGCGCACGTCAAAAACGCNTAGTCAGAGGGGCCGCGCGGGTTTGT",
             "gene_type": "V",
             "epitopes": [
-                "WIVFFYMLD",
-                "VPQWQDLIQ",
-                "WHERHLSEH",
-                "DGSNEHDDV",
-                "EFLPHFANY",
-                "DCFPHVAYL",
-                "IMMYFAGME",
-                "PICCNFVKD",
-                "PCDMVLKNK",
-                "VFWSMQRDE"
+                "EASWVYHN",
+                "WEPCFQQN",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "GTGAGATCCAAGGGGCTCTGAGACGCGCCGTGTTTGTTCCGCAGCTCATTCCCAGGCCACCGGAAGACTGCATCA",
+            "seq": "TGTNTCACGTNTTCCCTTTGCTGAAGCGTGCCTCCCCCTAAGTGCTAAGAATGAACCCATACACCGGTCTATGGG",
             "gene_type": "V",
             "epitopes": [
-                "WIVFFYMLD",
-                "DCFPHVAYL",
-                "DGSNEHDDV",
-                "VFWSMQRDE",
-                "IMMYFAGME",
-                "EFLPHFANY",
-                "PICCNFVKD",
-                "PCDMVLKNK",
-                "VPQWQDLIQ",
-                "WHERHLSEH"
+                "VAWSRMRN",
+                "YCYHENAH",
+                "VLGLWPRL",
+                "DWHFFRCV",
+                "VMFLNLFI"
             ]
         },
         {
-            "seq": "TAGTTACGGCTTCCGGGGTGTGAAGCTANCCACTGCTCCGTCGCACGCGTCAGTCNCGTTAAATAGCCATGCACG",
+            "seq": "ACATTCAGGCTTCTANCACTCAGGAAGCGTTGATACCACCATACTTCGGCTTGGTCTTTTTCCCTCTTTCGGGCA",
             "gene_type": "V",
             "epitopes": [
-                "VPQWQDLIQ",
-                "EFLPHFANY",
-                "DGSNEHDDV",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "PICCNFVKD",
-                "IMMYFAGME",
-                "VFWSMQRDE"
+                "ATHGCGYA",
+                "VAWSRMRN",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "CACACTTTGGTAAGTNCGGCCAGACGGCTACATANACGTAAATAATGCTGTAAGCCGTTGGAATGATCGGNATGT",
+            "seq": "AAGTTGTGCAGGCGGGGATGAAGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGC",
             "gene_type": "V",
             "epitopes": [
-                "WIVFFYMLD",
-                "PICCNFVKD",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "VFWSMQRDE"
+                "STNTDAVG",
+                "VMFLNLFI",
+                "IDSNDSEK",
+                "VLGLWPRL",
+                "ATHGCGYA",
+                "EASWVYHN",
+                "YCYHENAH",
+                "DWHFFRCV",
+                "VAWSRMRN",
+                "WEPCFQQN"
             ]
         }
     ],
     "j_genes": [
         {
-            "seq": "GATGGGTCCATCNNTTACCATCCCCCTCCGCACAGGGTNCGTTTAAAACTACCAGANAAAAACTCGAGTATTGAA",
+            "seq": "ATGANAAGTTGTTGGCTACTTTAGCGTTTAAGCTTCCTCTNACCGCCTTTAAGACAGACCATGACGCGAATAAGG",
             "gene_type": "J",
             "epitopes": [
-                "PICCNFVKD",
-                "WIVFFYMLD",
-                "DGSNEHDDV",
-                "DCFPHVAYL",
-                "EFLPHFANY"
+                "VMFLNLFI"
             ]
         },
         {
-            "seq": "GTGGACTCTACGATACGGGCGTGACAACTCTCGAATCACCTTGTATAGTCTTAGATTCCAGCATCGATTTACAAC",
+            "seq": "GGGACGGAAGCATTGGTCGCGAGCAGAGCTGCTTTCGCGCGGGAGCCATCAGACATTTGTCTAGACGACTTGTAA",
             "gene_type": "J",
             "epitopes": [
-                "VFWSMQRDE",
-                "VPQWQDLIQ",
-                "DGSNEHDDV",
-                "IMMYFAGME",
-                "EFLPHFANY",
-                "WIVFFYMLD",
-                "PICCNFVKD",
-                "WHERHLSEH"
+                "WEPCFQQN",
+                "ATHGCGYA",
+                "STNTDAVG",
+                "IDSNDSEK",
+                "VMFLNLFI",
+                "YCYHENAH",
+                "DWHFFRCV",
+                "EASWVYHN",
+                "VLGLWPRL"
             ]
         },
         {
-            "seq": "GCCAAAAGGCAATGACGGTGTGCCTNGGACCACAAGGCNGCTACANGGCCAATAANAGACGTTAGATGCTATACT",
+            "seq": "TCCGTTGGAGCGGGTCATGATACGAGTCTGCGAGGTGGCGTTTCTTACGCAGATTTAGGCCAAAATGCGATGGGC",
             "gene_type": "J",
             "epitopes": [
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "VFWSMQRDE",
-                "DGSNEHDDV",
-                "PICCNFVKD"
+                "ATHGCGYA"
             ]
         },
         {
-            "seq": "GTTACTCAGCCAGAATTACTGTATATCACGGAATGANGTACAGATACTGCCCNTATAGGCGGGGTTTCGTCGAAA",
+            "seq": "TTTTTCCCGTACATGCGGGATACAGTTGATGATNTAGGTTTNGAGAAAATTACAGACGGAAAANACTACGCATTC",
             "gene_type": "J",
             "epitopes": [
-                "EFLPHFANY",
-                "VPQWQDLIQ",
-                "DGSNEHDDV",
-                "PCDMVLKNK",
-                "PICCNFVKD",
-                "WIVFFYMLD",
-                "WHERHLSEH",
-                "DCFPHVAYL",
-                "IMMYFAGME",
-                "VFWSMQRDE"
+                "EASWVYHN",
+                "ATHGCGYA",
+                "VLGLWPRL",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "GTAGGCGGTCGCCTTGCCTGACGGGGTCGGGGCTGGGTTGAAGAAGCGCGCATACAAACTGGGACGGGCAGCATA",
+            "seq": "CGTCAACACACCCCGNATCTCCGCCCGAAGGGATCTATCACCTCATTAACGTCTTTGTTTAGCCATAACGGCAAC",
             "gene_type": "J",
             "epitopes": [
-                "PCDMVLKNK",
-                "WHERHLSEH",
-                "DCFPHVAYL",
-                "WIVFFYMLD"
+                "VMFLNLFI",
+                "STNTDAVG",
+                "IDSNDSEK",
+                "VLGLWPRL"
             ]
         },
         {
-            "seq": "CGGGGGCGTGAATGNGACCCGGACGGGGGGGCTCTTCAGGTAGTAGAATACTCAATAGTATATCAACACGNCCGG",
+            "seq": "CTTTGCTCAAGTATGAGCGCCTCCTTTGCACAAGCTAATCGCTAACGTTCCTAGGATGCGCATTGTTTGGCCAGG",
             "gene_type": "J",
             "epitopes": [
-                "PICCNFVKD",
-                "WIVFFYMLD",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "VPQWQDLIQ",
-                "IMMYFAGME"
+                "ATHGCGYA",
+                "EASWVYHN",
+                "VAWSRMRN",
+                "YCYHENAH",
+                "IDSNDSEK",
+                "STNTDAVG"
             ]
         },
         {
-            "seq": "TACTATGAGTCCTACAACATACAGCCACCTCCTCCCCCCCAAAATCAAGTAATGAGACTACACCGTAGTCGCATC",
+            "seq": "TATGGCCCGTACGAACCTACGGTGAACCACTTCCGGACGCGCACCTGGCTAGGCTAATGACTCTCCGCNTGNTGT",
             "gene_type": "J",
             "epitopes": [
-                "VFWSMQRDE"
+                "VLGLWPRL",
+                "IDSNDSEK",
+                "VMFLNLFI",
+                "EASWVYHN",
+                "YCYHENAH",
+                "WEPCFQQN",
+                "STNTDAVG",
+                "ATHGCGYA",
+                "DWHFFRCV",
+                "VAWSRMRN"
             ]
         },
         {
-            "seq": "ATACTGATCACCTCTATCCCCTGNCTTAAGCCCGGTAAAATGCAGGGTCCGGAGCCTAGAACGCCAACAGATTTA",
+            "seq": "TCTGATNTCGGGAAGACCAACCATTTCCCCTAGTCCCCTTCAGAGGCACTCGNCGCCGGCCGGAGGTGATTCTTG",
             "gene_type": "J",
             "epitopes": [
-                "VPQWQDLIQ",
-                "VFWSMQRDE",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PICCNFVKD",
-                "DGSNEHDDV",
-                "PCDMVLKNK",
-                "EFLPHFANY",
-                "DCFPHVAYL",
-                "WIVFFYMLD"
+                "VMFLNLFI",
+                "STNTDAVG",
+                "YCYHENAH",
+                "WEPCFQQN",
+                "VLGLWPRL",
+                "ATHGCGYA",
+                "EASWVYHN",
+                "VAWSRMRN",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "CTTTTAACCCTCTTTCCAGGTTTTGGCATGCGGTTCGCCCGAGCCGTGGAGCGGGCTCGCTATTGTCTGTCACCT",
+            "seq": "GGATCNCAAATCGATCGGTCGCGTTTTGAGCGTCCAACAAGCATNCCGACGTCTGNAACGGAGAGAGAATCAATT",
             "gene_type": "J",
             "epitopes": [
-                "WHERHLSEH",
-                "DGSNEHDDV",
-                "PCDMVLKNK",
-                "DCFPHVAYL",
-                "VFWSMQRDE",
-                "EFLPHFANY",
-                "VPQWQDLIQ",
-                "PICCNFVKD",
-                "IMMYFAGME",
-                "WIVFFYMLD"
+                "VAWSRMRN",
+                "STNTDAVG"
             ]
         },
         {
-            "seq": "TGCTGCCCCTCTCTGTCTANCAGGCTTATGGCGTTAGCGGTAGTAACTTGACATCTTCTGTCGTGGACATAGACG",
+            "seq": "CTGTGCCAGACGGTAGNTCTGCGTAGTGACCGGAACATGTATAACTATACGTCGACAGGTCGCCGTTATATAGTT",
             "gene_type": "J",
             "epitopes": [
-                "PCDMVLKNK",
-                "EFLPHFANY",
-                "DGSNEHDDV",
-                "VFWSMQRDE",
-                "WHERHLSEH",
-                "VPQWQDLIQ",
-                "IMMYFAGME",
-                "DCFPHVAYL",
-                "PICCNFVKD"
+                "ATHGCGYA",
+                "VLGLWPRL",
+                "YCYHENAH",
+                "VAWSRMRN"
             ]
         }
     ],
     "overlap_reads": [
         {
-            "seq": "TTGAANCAAACAAGCTTGGGTCATCTGAGGAGACGGACAACCGGTCTTCCCCCCAAACCGATCTCCAATTGACTA",
-            "v_gene": "AGGAGACGGACAACCGGTCTTCCCCCCAAACCGATCTCCAATTGACTACTTTGAANCAAACAAGCTTGGGTCATC",
-            "d_gene": "TG",
-            "j_gene": "AGGAGACGGACAACCGGTCTTCCCCCCAAACCGATCTCCAATTGACTACTTTGAANCAAACAAGCTTGGGTCATC",
+            "seq": "AGGGAAGATTAGATGCTTGAGCAATATGAGCCTTCCANAAGTCACGACTCNGCCTCAGCTTCTCAAACCCTCGCC",
+            "id": 0,
+            "v_gene": "GAGCAATATGAGCCTTCCANAAGTCACGACTCNGCCTCAGCTTCTCAAACCCTCGCCCTCGGTGGAGGGAAGATT",
+            "d_gene": "AGATGCTT",
+            "j_gene": "GAGCAATATGAGCCTTCCANAAGTCACGACTCNGCCTCAGCTTCTCAAACCCTCGCCCTCGGTGGAGGGAAGATT",
             "epitopes": [
-                "DCFPHVAYL",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "VAWSRMRN",
+                "STNTDAVG",
+                "VMFLNLFI"
             ]
         },
         {
-            "seq": "AGCCATGCACGAATGGAATCGCTAGTTACGGCTTCCGGGGTGTGAAGCTANCCACTGCTCCGTCGCACGCGTCAG",
-            "v_gene": "TAGTTACGGCTTCCGGGGTGTGAAGCTANCCACTGCTCCGTCGCACGCGTCAGTCNCGTTAAATAGCCATGCACG",
-            "d_gene": "AATGGAATCGC",
-            "j_gene": "TAGTTACGGCTTCCGGGGTGTGAAGCTANCCACTGCTCCGTCGCACGCGTCAGTCNCGTTAAATAGCCATGCACG",
+            "seq": "GGTCTTTTTCCCTCTTTCGGGCAGTCCCCCGCACATTCAGGCTTCTANCACTCAGGAAGCGTTGATACCACCATA",
+            "id": 1,
+            "v_gene": "ACATTCAGGCTTCTANCACTCAGGAAGCGTTGATACCACCATACTTCGGCTTGGTCTTTTTCCCTCTTTCGGGCA",
+            "d_gene": "GTCCCCCGC",
+            "j_gene": "ACATTCAGGCTTCTANCACTCAGGAAGCGTTGATACCACCATACTTCGGCTTGGTCTTTTTCCCTCTTTCGGGCA",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "ATHGCGYA",
+                "VAWSRMRN",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "ACCCGCTTTCGTCTTGCAGTGTCGTTCACTAAGCAGTCGCGCTCAGCAATCATATCTACTGTTCCTACGTATCAA",
-            "v_gene": "GCAGTCGCGCTCAGCAATCATATCTACTGTTCCTACGTATCAACCCGCCAAACACCCGCTTTCGTCTTGCAGTGT",
-            "d_gene": "CGTTCACTAA",
-            "j_gene": "GCAGTCGCGCTCAGCAATCATATCTACTGTTCCTACGTATCAACCCGCCAAACACCCGCTTTCGTCTTGCAGTGT",
+            "seq": "GATTACGGNAAAGACGAGCTGAGAGGATATAGAAGCAGTGGACTGCTATCTGAAAGNTGTGCAATTGGCGGGCGA",
+            "id": 2,
+            "v_gene": "TGCAATTGGCGGGCGAGGAGCGGCGATTACGGNAAAGACGAGCTGAGAGGATATAGAAGCAGTGGACTGCTATCT",
+            "d_gene": "GAAAGNTG",
+            "j_gene": "TGCAATTGGCGGGCGAGGAGCGGCGATTACGGNAAAGACGAGCTGAGAGGATATAGAAGCAGTGGACTGCTATCT",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "IMMYFAGME",
-                "WHERHLSEH",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "VAWSRMRN",
+                "EASWVYHN",
+                "ATHGCGYA",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "GTGTATTGTTAATGTCACAGTGGGCCTCTTACCATCGTAAAGCCACCAGAATCCGTTCTCCGCAAGATGCATACG",
-            "v_gene": "ATCGTAAAGCCACCAGAATCCGTTCTCCGCAAGATGCATACGCAATCGCCGTGTGTATTGTTAATGTCACAGTGG",
-            "d_gene": "GCCTCTTACC",
-            "j_gene": "ATCGTAAAGCCACCAGAATCCGTTCTCCGCAAGATGCATACGCAATCGCCGTGTGTATTGTTAATGTCACAGTGG",
+            "seq": "AGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGCACANAGACTGAAGTTGTGCAG",
+            "id": 3,
+            "v_gene": "AAGTTGTGCAGGCGGGGATGAAGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGC",
+            "d_gene": "ACANAGACTG",
+            "j_gene": "AAGTTGTGCAGGCGGGGATGAAGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGC",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "VAWSRMRN",
+                "VMFLNLFI",
+                "WEPCFQQN",
+                "EASWVYHN",
+                "ATHGCGYA",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "STNTDAVG",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "GTNCGGCCAGACGGCTACATANACGTAAATAATGCTGTAAGCCGTTGGAATGATCGGNATGTGCACACTTTGGTA",
-            "v_gene": "CACACTTTGGTAAGTNCGGCCAGACGGCTACATANACGTAAATAATGCTGTAAGCCGTTGGAATGATCGGNATGT",
-            "d_gene": "G",
-            "j_gene": "CACACTTTGGTAAGTNCGGCCAGACGGCTACATANACGTAAATAATGCTGTAAGCCGTTGGAATGATCGGNATGT",
+            "seq": "TCTGACCTGTATCGTGACAACCTAATGCGCACGTCAAAAACGCNTAGTCAGAGGGGCCGCGCGGGTTTGTACTAC",
+            "id": 4,
+            "v_gene": "TATAATCTGACCTGTATCGTGACAACCTAATGCGCACGTCAAAAACGCNTAGTCAGAGGGGCCGCGCGGGTTTGT",
+            "d_gene": "ACTAC",
+            "j_gene": "TATAATCTGACCTGTATCGTGACAACCTAATGCGCACGTCAAAAACGCNTAGTCAGAGGGGCCGCGCGGGTTTGT",
             "epitopes": [
-                "VPQWQDLIQ",
-                "IMMYFAGME",
-                "WHERHLSEH",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "VAWSRMRN",
+                "WEPCFQQN",
+                "EASWVYHN",
+                "ATHGCGYA",
+                "STNTDAVG",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "TACAATTTTGATTANTGTGGGAATCTCCCCATNATGAATTCTTGGGACGTTACTCCGCCGTCCTGTCGAGGGGCA",
-            "v_gene": "ATNATGAATTCTTGGGACGTTACTCCGCCGTCCTGTCGAGGGGCAATGTATACAATTTTGATTANTGTGGGAATC",
-            "d_gene": "TCCCC",
-            "j_gene": "ATNATGAATTCTTGGGACGTTACTCCGCCGTCCTGTCGAGGGGCAATGTATACAATTTTGATTANTGTGGGAATC",
+            "seq": "CCATACACCGGTCTATGGGGTAACCCCTCTTGTNTCACGTNTTCCCTTTGCTGAAGCGTGCCTCCCCCTAAGTGC",
+            "id": 5,
+            "v_gene": "TGTNTCACGTNTTCCCTTTGCTGAAGCGTGCCTCCCCCTAAGTGCTAAGAATGAACCCATACACCGGTCTATGGG",
+            "d_gene": "GTAACCCCTCT",
+            "j_gene": "TGTNTCACGTNTTCCCTTTGCTGAAGCGTGCCTCCCCCTAAGTGCTAAGAATGAACCCATACACCGGTCTATGGG",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "VAWSRMRN",
+                "VMFLNLFI",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "STNTDAVG"
             ]
         },
         {
-            "seq": "AAATTACTTAAAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNACATG",
-            "v_gene": "GTACAAATTACTTAAAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNA",
-            "d_gene": "CAT",
-            "j_gene": "GTACAAATTACTTAAAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNA",
+            "seq": "AGCCCGNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTCAACGCCAAA",
+            "id": 6,
+            "v_gene": "AAACGAAGAAGCCCGNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTC",
+            "d_gene": "AACGCC",
+            "j_gene": "AAACGAAGAAGCCCGNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTC",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "VAWSRMRN",
+                "VMFLNLFI",
+                "WEPCFQQN",
+                "EASWVYHN",
+                "ATHGCGYA",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "STNTDAVG",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "GAGATCCAAGGGGCTCTGAGACGCGCCGTGTTTGTTCCGCAGCTCATTCCCAGGCCACCGGAAGACTGCATCATG",
-            "v_gene": "GTGAGATCCAAGGGGCTCTGAGACGCGCCGTGTTTGTTCCGCAGCTCATTCCCAGGCCACCGGAAGACTGCATCA",
-            "d_gene": "T",
-            "j_gene": "GTGAGATCCAAGGGGCTCTGAGACGCGCCGTGTTTGTTCCGCAGCTCATTCCCAGGCCACCGGAAGACTGCATCA",
+            "seq": "CTTCTANCACTCAGGAAGCGTTGATACCACCATACTTCGGCTTGGTCTTTTTCCCTCTTTCGGGCAGAGCACATT",
+            "id": 7,
+            "v_gene": "ACATTCAGGCTTCTANCACTCAGGAAGCGTTGATACCACCATACTTCGGCTTGGTCTTTTTCCCTCTTTCGGGCA",
+            "d_gene": "GAGC",
+            "j_gene": "ACATTCAGGCTTCTANCACTCAGGAAGCGTTGATACCACCATACTTCGGCTTGGTCTTTTTCCCTCTTTCGGGCA",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "IMMYFAGME",
-                "WHERHLSEH",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "ATHGCGYA",
+                "VAWSRMRN",
+                "STNTDAVG",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "AAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNACCCCNGTACAAATT",
-            "v_gene": "GTACAAATTACTTAAAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNA",
-            "d_gene": "CCCCN",
-            "j_gene": "GTACAAATTACTTAAAGGATCTTACTGAACATACTCTGGACTTGCTTGCGTCCGCCTATTGCAATTGCGAGGTNA",
+            "seq": "GNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTCCTTACATGTAAACG",
+            "id": 8,
+            "v_gene": "AAACGAAGAAGCCCGNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTC",
+            "d_gene": "CTTACATGT",
+            "j_gene": "AAACGAAGAAGCCCGNACCTATGACNTTGCCTCTTACTACTGCGGAATCAGCGCACTTCACCACTCCTGAGAGTC",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "WEPCFQQN",
+                "EASWVYHN",
+                "ATHGCGYA",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "IDSNDSEK"
             ]
         },
         {
-            "seq": "ATGCATACGCAATCGCCGTGTGTATTGTTAATGTCACAGTGGATTGAANAATCGTAAAGCCACCAGAATCCGTTC",
-            "v_gene": "ATCGTAAAGCCACCAGAATCCGTTCTCCGCAAGATGCATACGCAATCGCCGTGTGTATTGTTAATGTCACAGTGG",
-            "d_gene": "ATTGAANA",
-            "j_gene": "ATCGTAAAGCCACCAGAATCCGTTCTCCGCAAGATGCATACGCAATCGCCGTGTGTATTGTTAATGTCACAGTGG",
+            "seq": "GGGATGAAGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGCCTAAGTTGTGCAGG",
+            "id": 9,
+            "v_gene": "AAGTTGTGCAGGCGGGGATGAAGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGC",
+            "d_gene": "CT",
+            "j_gene": "AAGTTGTGCAGGCGGGGATGAAGTCATTGTGCTAGATGATCCTGCGGGTGTCACAGAGCGGCTTAATCGCGGTGC",
             "epitopes": [
-                "VPQWQDLIQ",
-                "DCFPHVAYL",
-                "WHERHLSEH",
-                "IMMYFAGME",
-                "PCDMVLKNK",
-                "WIVFFYMLD",
-                "EFLPHFANY",
-                "VFWSMQRDE",
-                "PICCNFVKD",
-                "DGSNEHDDV"
+                "YCYHENAH",
+                "VAWSRMRN",
+                "VMFLNLFI",
+                "WEPCFQQN",
+                "EASWVYHN",
+                "ATHGCGYA",
+                "DWHFFRCV",
+                "VLGLWPRL",
+                "STNTDAVG",
+                "IDSNDSEK"
             ]
         }
     ],
     "random_reads": [
         {
-            "seq": "ATTCGCCGACCGTACCCGGCGTTCTGAAGTAATCTACCAAATTGGGGCTACTTCGGAAATAGCAGCGCAAAAGNA",
+            "seq": "TANGGNGGACATTCGAAGAACAGCCTCGGGTAGTGGCAACTCGGTAAGCTTTCCAGGCCAACAGATACTCGCGCC",
+            "id": 0,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "CGCGTTCTCGTATGACTATAAGTCGAGACGCCTCTTGGGTTACGGGAACTGGGCGCGAACATACCCAGNGCAGGG",
+            "seq": "TTAGGGCTCTCTGGCGAAANTNCGGCGAGATAGAACCTANAAAGCGTAATTATACCTGCAAGATTCGGTTCGGTG",
+            "id": 1,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "AAAAGGCATGCAACGGATATTGAGCGTTCAGGAAGCATAGAGTGGGACCGCCATCGCTCGCGTACATGCGTATAT",
+            "seq": "AGACCTGCAATGGTCTGTANGAGATAACCCACTNAGCCCGATCCACCGAGCTCGAAGCGACTCCGCAGCTGGTCA",
+            "id": 2,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "GAGCTCGGAGGACTCTCTTGACAGCGACCGATTGTAAAATATTGACGTATGTGTTGCTCGGTATAACGGCGAGAC",
+            "seq": "CATTGCTATGCGCACGTATCGGATCATTTGCGGTTTACATACCTTGTCGTCGATGGTCGCCATTAACTAGCGNGA",
+            "id": 3,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "GGGGTAACACTAATCAAATCTTGTCGTGGGNCACGGCGAGTGCCGTTTCGGGTGACATAGAAATTAGAGCCAGAG",
+            "seq": "CTTTGGGCCTGGTAACCCCCAGAACGCACCCTCAAGGACGGTAATAATTCTCCGATACTGAAGGACATGGCCCAG",
+            "id": 4,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "CGTNTNCAGTTGTTTGTGGTCCATCAATGGCATTGGGGGGTGAAGTCTGCGTCATTGGCAACTCGAGTAACTAAT",
+            "seq": "ACGGATATTCAAAAGCGAACGCNAGATGTGCTGTTATCAGATGAATCGGTACGCTCCTACACGAGGGNCGGTGCT",
+            "id": 5,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "TCTGAGCACTGTTCGTTTCTGAGCAATAGAACGCGTNATCTTCACGCCTCAGAAGAGGTAACCGCGGAGCGTATC",
+            "seq": "TGNCCGTCTACCGCGGTCCTGAAGTATGGCTTCGCNAACTAATAATCGAGTGAGTAACGCCGCGGACTAAGGCCT",
+            "id": 6,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "GACATAGGTTAGTAGACCATGTCGAACACTANGTTGACAAAATTGGTCGCAACGTATTACCCACGGTTNAGGCGC",
+            "seq": "TCATCAATATCCTTGAGGATAGAAATTTGTACCCCCGAGTTCCCGGGAGCTATTGAGCACCANTGTTTAGAACAT",
+            "id": 7,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "CTTACNCACGGGAAGCACCGTAACGGAGACTACGGGCACAACGGCAGTTGAAGGCATAAGTCAGCGGTGGACATT",
+            "seq": "GGAACCCCAGTTTATCACCATGAGGTTACAATNCATTCGCCCGTAGAGTCGTGAAATACTTCTCTCGTTTTTGTG",
+            "id": 8,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",
             "epitopes": []
         },
         {
-            "seq": "TCCAACAACCTACGAGGCTNTCTTCGCCTGTTAGCAAATATCACTCAAGCGCTTACGGCATGTAATGCCACGTGT",
+            "seq": "TACCGGTTGTGTGGATAGTTTGTGGGTACTTGCTGAGTATAGGTCTGCGGAACGTACGCAGATAATCATATTCGA",
+            "id": 9,
             "v_gene": "",
             "d_gene": "",
             "j_gene": "",

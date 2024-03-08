@@ -1,0 +1,325 @@
+2024-03-06 21:56:42,770	INFO worker.py:1724 -- Started a local Ray instance.
+2024-03-06 21:56:44,815	INFO tune.py:220 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `Tuner(...)`.
+2024-03-06 21:56:44,817	INFO tune.py:592 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+2024-03-06 21:56:44,842	WARNING tune_controller.py:2174 -- The maximum number of pending trials has been automatically set to the number of available cluster CPUs, which is high (140 CPUs/pending trials). If you're running an experiment with a large number of trials, this could lead to scheduling overhead. In this case, consider setting the `TUNE_MAX_PENDING_TRIALS_PG` environment variable to the desired maximum number of concurrent trials.
+2024-03-06 21:59:53,740	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00070
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2737946, ip=192.168.0.23, actor_id=5bcb768d9fed183e3094f8ae01000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 115, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 21:59:54,427	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00095
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2738355, ip=192.168.0.23, actor_id=43eff60d8e62d3ba095cde4501000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 115, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 21:59:55,381	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00120
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2738794, ip=192.168.0.23, actor_id=e16506676358f7603de21f2201000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 115, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:02:48,164	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00140
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2737745, ip=192.168.0.23, actor_id=1492d310a6c9d05c528ed7a001000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:02:59,961	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00285
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2738753, ip=192.168.0.23, actor_id=2be80d64ae8e8c2e3ad5495d01000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:03:00,935	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00165
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2738818, ip=192.168.0.23, actor_id=f530799cdb224b1a23e1c1c101000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:03:01,560	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00185
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2737904, ip=192.168.0.23, actor_id=22fb7d8ade3dbe65871b6c1d01000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:04:29,007	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00240
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2737598, ip=192.168.0.23, actor_id=9d0492c9e8a79333021b9af301000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:04:31,042	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00265
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2738840, ip=192.168.0.23, actor_id=8f009d2499dedb94ecaa522c01000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:04:35,238	ERROR tune_controller.py:1374 -- Trial task failed for trial objective_7a54a_00295
+Traceback (most recent call last):
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+             ^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/_private/worker.py", line 2624, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ZeroDivisionError): [36mray::ImplicitFunc.train()[39m (pid=2737607, ip=192.168.0.23, actor_id=3b6b65ac5aecab52bcd4087101000000, repr=objective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 342, in train
+    raise skipped from exception_cause(skipped)
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/air/_internal/util.py", line 88, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 249, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/new-stg/home/banghua/anaconda3/envs/Pavel/lib/python3.11/site-packages/ray/tune/trainable/function_trainable.py", line 332, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/new-stg/home/banghua/Pavel/GridSearch.py", line 47, in objective
+    precision = num_true_pos / (num_true_pos + num_false_pos)
+                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2024-03-06 22:04:37,436	ERROR tune.py:1038 -- Trials did not complete: [objective_7a54a_00070, objective_7a54a_00095, objective_7a54a_00120, objective_7a54a_00140, objective_7a54a_00165, objective_7a54a_00185, objective_7a54a_00240, objective_7a54a_00265, objective_7a54a_00285, objective_7a54a_00295]

@@ -12,7 +12,7 @@ from OverlapAlignment import OverlapVDJAlignment
 
 def JunkReadRecovery(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                      overlap_match_score: int, overlap_mismatch_score: int, threshold: int,
-                     data: Dict, save: bool = False) -> Dict:
+                     data: Dict, save: bool = False, print_progress: bool = False) -> Dict:
     """
     Perform overlap alignment between V, D, and J genes and reads
 
@@ -26,8 +26,9 @@ def JunkReadRecovery(match_reward: int, mismatch_penalty: int, indel_penalty: in
     threshold : int, threshold for the score
     data : Dict, data
     save : bool, save the results to a JSON file
+    print_progress : bool, print progress
     """
-    final_json = AlignAllReads(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, data)
+    final_json = AlignAllReads(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, data, print_progress=print_progress)
     final_json = KeepHighScoreAlignments(final_json, threshold)
     if save:
         final_json_save = {
@@ -69,7 +70,7 @@ def KeepHighScoreAlignments(data: Dict, threshold: int) -> Dict:
 
 def AlignAllReads(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                   overlap_match_score: int, overlap_mismatch_score: int,
-                  data: Dict) -> List:
+                  data: Dict, print_progress: bool) -> List:
     """
     Perform overlap alignment between V, D, and J genes and reads
 
@@ -99,19 +100,29 @@ def AlignAllReads(match_reward: int, mismatch_penalty: int, indel_penalty: int,
     
     results_overlap = []
     print('Aligning overlap reads')
-    # for read in tqdm.tqdm(overlap_reads):
-    for read in overlap_reads:
-        result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
-                              overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
-        results_overlap.append(result)
+    if print_progress:
+        for read in tqdm.tqdm(overlap_reads):
+            result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
+                                overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
+            results_overlap.append(result)
+    else:
+        for read in overlap_reads:
+            result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
+                                overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
+            results_overlap.append(result)
 
     results_random = []
     print('\nAligning random reads')
-    # for read in tqdm.tqdm(random_reads):
-    for read in random_reads:
-        result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
-                                overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
-        results_random.append(result)
+    if print_progress:
+        for read in tqdm.tqdm(random_reads):
+            result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
+                                    overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
+            results_random.append(result)
+    else:
+        for read in random_reads:
+            result = AlignOneRead(match_reward, mismatch_penalty, indel_penalty, 
+                                    overlap_match_score, overlap_mismatch_score, all_v_genes, all_j_genes, read)
+            results_random.append(result)
 
     final_json = {
         'overlap': results_overlap,
@@ -158,6 +169,6 @@ if __name__ == "__main__":
     
     match_reward, mismatch_penalty, indel_penalty = 1, 1, 1
     overlap_match_score, overlap_mismatch_score = 1, 1
-    threshold = 5
+    threshold = 25
     final_json = JunkReadRecovery(match_reward, mismatch_penalty, indel_penalty, overlap_match_score, overlap_mismatch_score, threshold, data, True)
 

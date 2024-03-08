@@ -39,7 +39,7 @@ def simulate_vj_genes(n_genes: int, len_gene: int, epitope_pool: List, gene_type
     genes = []
     for _ in range(n_genes):
         gene = random_nt_sequence(len_gene)
-        num_epitopes = random.randint(1, 10)
+        num_epitopes = random.randint(1, 3)
         gene_epitopes = random.sample(epitope_pool, num_epitopes)
         gene_obj = Gene(gene, gene_type, gene_epitopes)
         genes.append(gene_obj)
@@ -99,7 +99,7 @@ def simulate_overlap_reads(n_reads: int, len_read: int, v_gene_pool: Dict, j_gen
             read_seq = v_gene_seq[-len_v_overlap:] + d_seq + j_gene_seq[:len_j_overlap]
 
         read_epitopes = list(set(v_gene.epitopes + j_gene.epitopes))
-        read_obj = Read(read_seq, v_gene_seq, d_seq, j_gene_seq, read_epitopes)
+        read_obj = Read(read_seq, len(reads), v_gene_seq, d_seq, j_gene_seq, read_epitopes)
         reads.append(read_obj)
 
         assert len(read_seq) == len_read
@@ -121,7 +121,7 @@ def simulate_random_reads(n_reads: int, len_read: int) -> List:
     len_read : int, length of the reads
     """
     reads = [random_nt_sequence(len_read) for _ in range(n_reads)]
-    reads_obj = [Read(read, '', '', '', []) for read in reads]
+    reads_obj = [Read(reads[i], i, '', '', '', []) for i in range(n_reads)]
     return reads_obj
 
 def simulate(num_epitopes: int, num_v_genes: int, num_j_genes: int, num_reads: int, len_read: int, json: bool = False):
@@ -166,5 +166,5 @@ if __name__ == "__main__":
     num_reads = 100
     len_read = 75
     data = simulate(num_epitopes, num_v_genes, num_j_genes, num_reads, len_read, True)
-    with open('./Simulation/sim_grid_search.json', 'w') as f:
+    with open('./Simulation/sim_3_7.json', 'w') as f:
         json.dump(data, f, indent=4)
