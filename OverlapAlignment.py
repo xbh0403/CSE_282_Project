@@ -4,12 +4,14 @@ import numpy as np
 import sys
 from typing import List, Dict, Iterable, Tuple
 import json
+from Gene import Gene
+from Read import Read
 sys.setrecursionlimit(100000)
 
 
 def OverlapVDJAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: int,
                         overlap_match_score: int, overlap_mismatch_score: int,
-                        v_gene: Dict, j_gene: Dict, read: Dict, 
+                        v_gene: Gene, j_gene: Gene, read: Read, 
                         print_details) -> Dict:
     """
     Perform overlap alignment between V, D, and J genes and a read
@@ -36,13 +38,15 @@ def OverlapVDJAlignment(match_reward: int, mismatch_penalty: int, indel_penalty:
     score_j_head, aligned_read_tail, aligned_j_head = OverlapAlignment(match_reward, mismatch_penalty, indel_penalty, read_seq, j_gene_seq, print_details)
     score_overlap_v, score_overlap_j = 0, 0
     if len(aligned_v_tail) > 0 and len(aligned_read_head) > 0:
-        score_overlap_v = sum([overlap_match_score if aligned_v_tail[i] == aligned_read_head[i] else overlap_mismatch_score for i in range(len(aligned_v_tail))])
+        score_overlap_v = sum([overlap_match_score if aligned_v_tail[i] == aligned_read_head[i] else -overlap_mismatch_score for i in range(len(aligned_v_tail))])
     if len(aligned_read_tail) > 0 and len(aligned_j_head) > 0:
-        score_overlap_j = sum([overlap_match_score if aligned_read_tail[i] == aligned_j_head[i] else overlap_mismatch_score for i in range(len(aligned_read_tail))])
+        score_overlap_j = sum([overlap_match_score if aligned_read_tail[i] == aligned_j_head[i] else -overlap_mismatch_score for i in range(len(aligned_read_tail))])
     final_score = score_overlap_v + score_overlap_j
     
     result = {
         'final_score': final_score,
+        'read_seq': read_seq,
+        'read_id': read.id,
         'aligned_v_tail': aligned_v_tail,
         'aligned_read_head': aligned_read_head,
         'v_gene_epi': v_gene_epi,
