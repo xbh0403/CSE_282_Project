@@ -37,18 +37,8 @@ def brute_force_max_coverage(epitope_reads_dict: Dict, k: int) -> Set:
     
     return best_combination
 
-# Example usage
-if __name__ == "__main__":
-    # Example epitope_reads_dict
-    # epitope_reads_dict = {
-    #     'epitope1': {'read1', 'read2', 'read3'},
-    #     'epitope2': {'read2', 'read4'},
-    #     'epitope3': {'read5', 'read6'},
-    #     'epitope4': {'read3', 'read7', 'read8'}
-    # }
-    # k = 2
-    # print(brute_force_max_coverage(epitope_reads_dict, k))
 
+if __name__ == "__main__":
     with open('./Simulation/sim_3_7.json') as f:
         data = json.load(f)
 

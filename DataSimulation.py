@@ -39,7 +39,7 @@ def simulate_vj_genes(n_genes: int, len_gene: int, epitope_pool: List, gene_type
     genes = []
     for _ in range(n_genes):
         gene = random_nt_sequence(len_gene)
-        num_epitopes = random.randint(1, 3)
+        num_epitopes = random.randint(1, 4)
         gene_epitopes = random.sample(epitope_pool, num_epitopes)
         gene_obj = Gene(gene, gene_type, gene_epitopes)
         genes.append(gene_obj)
@@ -160,11 +160,27 @@ def simulate(num_epitopes: int, num_v_genes: int, num_j_genes: int, num_reads: i
 
 
 if __name__ == "__main__":
-    num_epitopes = 10
-    num_v_genes = 10
-    num_j_genes = 10
-    num_reads = 100
-    len_read = 75
-    data = simulate(num_epitopes, num_v_genes, num_j_genes, num_reads, len_read, True)
-    with open('./Simulation/sim_3_7.json', 'w') as f:
-        json.dump(data, f, indent=4)
+    # num_epitopes = 10
+    # num_v_genes = 10
+    # num_j_genes = 10
+    # num_reads = 100
+    # len_read = 75
+    # data = simulate(num_epitopes, num_v_genes, num_j_genes, num_reads, len_read, True)
+    # with open('./Simulation/sim_3_7.json', 'w') as f:
+    #     json.dump(data, f, indent=4)
+
+
+    for i in range(10):
+        num_epitopes = random.randint(10, 30)
+        num_v_genes = random.randint(10, 30)
+        num_j_genes = random.randint(10, 30)
+        num_reads = random.randint(800, 1200)
+        len_read = 75
+        print(f'Simulating data {i}...')
+        print(f'# Epitopes: {num_epitopes}, # V genes: {num_v_genes}, # J genes: {num_j_genes}, # Reads: {num_reads}')
+        data = simulate(num_epitopes, num_v_genes, num_j_genes, num_reads, len_read, True)
+        with open(f'./Simulation/algorithm_eval/sim_{i}.json', 'w') as f:
+            json.dump(data, f, indent=4)
+
+        
+
