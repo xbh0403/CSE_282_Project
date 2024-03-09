@@ -24,7 +24,7 @@ def greedy_max_coverage(epitope_reads_dict: Dict, k: int) -> Set:
     """
     selected_epitopes = set()
     uncovered_reads = set(read for reads in epitope_reads_dict.values() for read in reads)
-    num_all_reads = len(uncovered_reads)
+    best_coverage_sum = 0
     for _ in range(k):
         if not uncovered_reads:
             break
@@ -38,7 +38,8 @@ def greedy_max_coverage(epitope_reads_dict: Dict, k: int) -> Set:
         if best_epitope:
             selected_epitopes.add(best_epitope)
             uncovered_reads -= set(epitope_reads_dict[best_epitope])
-    return selected_epitopes, num_all_reads - len(uncovered_reads)
+            best_coverage_sum += best_coverage
+    return selected_epitopes, best_coverage_sum
 
 # Example usage
 if __name__ == "__main__":
